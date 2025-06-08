@@ -1,14 +1,10 @@
 import React from 'react';
 import './ClearComponent.css';
 
-const ClearComponent = ({ label }) => {
-  const handleClick = () => {
-    alert(`You clicked ${label}`);
-  };
-
+const ClearComponent = ({ onClick }) => {
   return (
-    <button className="buttonclear" onClick={handleClick}>
-      {label}
+    <button className="buttonclear" onClick={onClick} style={{ marginTop: '10px' }}>
+      Clear
     </button>
   );
 };

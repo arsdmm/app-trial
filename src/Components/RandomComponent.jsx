@@ -1,16 +1,12 @@
 import React from 'react';
 import './RandomComponent.css';
 
-const RandomComponent = ({ label }) => {
-  const handleClick = () => {
-    alert(`You clicked ${label}`);
-  };
-
+function RandomComponent({ label, onClick }) {
   return (
-    <button className="buttonrandom" onClick={handleClick}>
+    <button className="buttonrandom" onClick={onClick}>
       {label}
     </button>
   );
-};
+}
 
 export default RandomComponent;

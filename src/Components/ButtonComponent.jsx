@@ -1,13 +1,12 @@
 import React from 'react';
 import './ButtonComponent.css';
 
-const ButtonComponent = ({ number }) => {
-  const handleClick = () => {
-    alert(`You clicked button number ${number}`);
-  };
-
+const ButtonComponent = ({ number, onClick, isSelected }) => {
   return (
-    <button className="button" onClick={handleClick}>
+    <button
+      className={`button ${isSelected ? 'selected' : ''}`}
+      onClick={() => onClick(number)}
+    >
       {number}
     </button>
   );
