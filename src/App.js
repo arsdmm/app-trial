@@ -8,9 +8,9 @@ import ClearComponent from './Components/ClearComponent';
 import MoneyClearComponent from './Components/MoneyClearComponent';
 
 function App() {
-  const [selectedAmounts, setSelectedAmounts] = useState([]);
-  const [selectedNumbers, setSelectedNumbers] = useState([]);
-  const [total, setTotal] = useState(0);
+  const [selectedAmounts, setSelectedAmounts] = useState([]); // store all cash numbers
+  const [selectedNumbers, setSelectedNumbers] = useState([]); // store all numbers
+  const [total, setTotal] = useState(0); //total sum after "Cash" clicked
 
 // This function is called when a money amount button is clicked.
 // It updates the state by adding the clicked amount to the selectedAmounts array.
@@ -20,9 +20,9 @@ const handleMoneyClick = (amount) => {
     return; // If user didn't selected 5 numbers
   }
   setSelectedAmounts((selectedAmounts) => [...selectedAmounts, amount]);
-  // - The previous selectedAmounts array is spread into a new array.
-  // - The new amount is appended to the end of this new array.
-  // - This ensures the state is updated immutably.
+  // The previous selectedAmounts array is spread into a new array.
+  // The new amount is appended to the end of this new array.
+  // This ensures the state is updated immutably.
 };
 
 // This function is called when the "Cash" button is clicked.
