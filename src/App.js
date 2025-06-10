@@ -75,14 +75,14 @@ const handleClearNumbers = () => {
 };
 
 const handleRandomClick = () => {
-  const totalNumbers = 24;     // Total numbers available to choose from (1 to 25)
+  const totalNumbers = 24;     // Total numbers available to choose from (1 to 24)
   const maxSelections = 5;     // Maximum numbers to select randomly
 
   const numbers = [];          // Initialize empty array to store unique random numbers
 
   // Loop until we have 5 unique random numbers
   while (numbers.length < maxSelections) {
-    // Generate a random number between 1 and 25 (inclusive)
+    // Generate a random number between 1 and 24 (inclusive)
     const randomNumber = Math.floor(Math.random() * totalNumbers) + 1;
 
     // Check if this random number is NOT already in the array
